@@ -6,7 +6,7 @@
 
 <% for(let i = 0;i<homeContentTitle.length;i++){ %>
 <h1><%= homeContentTitle[i].TITLE %></h1>
-<p><%= homeContentTitle[i].postText %></p>
+<p><%=  homeContentTitle[i].postText.substring(0,90) + " ..." %><a href="/post/<%=homeContentTitle[i].TITLE %>">Read More</a></p>
 
 <%} %>
 

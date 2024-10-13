@@ -51,10 +51,9 @@ app.post("/compose", (req, res) => {
 app.get("/post/:UUID", (req, res) => {
   POSTS.forEach((item) => {
     if (_.lowerCase(item.TITLE === req.params.UUID)) {
-      console.log("Match Found");
+      res.render("post", { TITLE: item.TITLE, Para: item.postText });
     }
   });
-  console.log(req.params.UUID);
 });
 
 app.post("/home");
