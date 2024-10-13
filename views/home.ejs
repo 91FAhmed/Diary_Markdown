@@ -1,7 +1,13 @@
 <%- include("Layouts/header"); %>
 
-<h1>Home</h1>
-<p><%= homeContent %></p>
 
+<h1>HOME</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsam totam hic officiis, vitae eum sed doloremque dicta odit? Unde quasi non eligendi expedita saepe ducimus, reiciendis esse nam, vitae quidem reprehenderit totam. Modi ut quam dignissimos atque ad illo, quaerat fugit!</p>
+
+<% for(let i = 0;i<homeContentTitle.length;i++){ %>
+<h1><%= homeContentTitle[i].TITLE %></h1>
+<p><%= homeContentTitle[i].postText %></p>
+
+<%} %>
 
 <%- include("Layouts/footer"); %>
